@@ -29,7 +29,31 @@ public class Main {
         System.out.println("");
         System.out.println("");
 
+        //task4
+        System.out.println("Task 4");
+        System.out.println("Задан двумерный массив 10х10");
+        System.out.println("Результат: ");
+        task4(new int[10][10]);
+        System.out.println("");
+        System.out.println("");
+
+        //task5
+        System.out.println("Task 5");
+        System.out.println("Задан массив: [ 1, 5, -3, 2, 11, 4, 5, 2, 4, 8, 9, 1 ]");
+        System.out.println("Результат: ");
+        task5(new int[]{1, 5, -3, 2, 11, 4, 5, 2, 4, 8, 9, 1});
+        System.out.println("");
+        System.out.println("");
+
+        //task7
+        System.out.println("Task 7");
+        System.out.println("Задан массив: [ 1, 5, -3, 2, 11, 4, 5, 2, 4, 8, 9, 1 ] и число n = 2");
+        System.out.println("Результат: ");
+        task7(new int[]{1, 5, -3, 2, 11, 4, 5, 2, 4, 8, 9, 1}, 2);
+        System.out.println("");
+        System.out.println("");
     }
+
 
 
     public static void task1(int[] array) {
@@ -67,5 +91,44 @@ public class Main {
             System.out.print(array[i] + " ");
         }
     }
+
+    public static void task4(int[][] array) {
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array.length; j++) {
+                if (j==i)  array[i][j] = 1;
+                else  array[i][j] = 0;
+            }
+        }
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                System.out.print(array[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void task5(int[] array) {
+        int min = array[0];
+        int max = array[0];
+
+        for (int i = 0; i < array.length; i++) {
+            if (array[i]>max) max = array[i];
+            if (array[i]<min) min = array[i];
+        }
+        System.out.println("Максималное число в массиве: " + max);
+        System.out.println("Минимальное число в массиве: " + min);
+    }
+
+
+    public static void task7(int[] array, int n) {
+        for (int i = 0; i < array.length; i++) {
+            array[i] = array[i+n];
+        }
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + " ");
+        }
+
+    }
+
 }
 
