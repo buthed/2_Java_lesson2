@@ -45,13 +45,15 @@ public class Main {
         System.out.println("");
         System.out.println("");
 
+        //task6
+        System.out.println("Task 6");
+        System.out.println("Не смог решить без помощи интернета");
+        System.out.println("");
+        System.out.println("");
+
         //task7
         System.out.println("Task 7");
-        System.out.println("Задан массив: [ 1, 5, -3, 2, 11, 4, 5, 2, 4, 8, 9, 1 ] и число n = 2");
-        System.out.println("Результат: ");
-        task7(new int[]{1, 5, -3, 2, 11, 4, 5, 2, 4, 8, 9, 1}, 2);
-        System.out.println("");
-        System.out.println("");
+        System.out.println("Не смог решить без помощи интернета");
     }
 
 
@@ -119,16 +121,6 @@ public class Main {
         System.out.println("Минимальное число в массиве: " + min);
     }
 
-
-    public static void task7(int[] array, int n) {
-        for (int i = 0; i < array.length; i++) {
-            array[i] = array[i+n];
-        }
-        for (int i = 0; i < array.length; i++) {
-            System.out.print(array[i] + " ");
-        }
-
-    }
 
 }
 
